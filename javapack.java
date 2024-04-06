@@ -89,8 +89,8 @@ class EmailVerification1 {
 }
 
 class S3 {
-    static String accessKey = "AKIA5Q6T6OJFXMJWWDRU";
-    static String secretKey = "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";
+    static String accessKey = "EKJHNDRGGBWFA";
+    static String secretKey = "gtyjku5kmgnbfvryu23jhnf";
     public void Newbucket(String bucket) {
         String bucketName = bucket;
         String userName = "student";
