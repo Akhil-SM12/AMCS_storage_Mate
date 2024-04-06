@@ -52,8 +52,8 @@ class EmailVerification1 {
         Random random = new Random();
         otp = 100000 + random.nextInt(900000);    //6-digit otp generation
 
-        final String username = "21pc04@psgtech.ac.in";
-        final String password = "@ppu1502";
+        final String username = "abc@gmail.com";
+        final String password = "eergthyj";
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -223,7 +223,7 @@ public class javapack extends Application {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] data = pass.getBytes(StandardCharsets.UTF_8);
             byte[] hash = digest.digest(data);
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_try", "root", "aparnaa");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_try", "root", "abc");
             PreparedStatement statement = connection.prepareStatement("SELECT password FROM my_table WHERE username = ?");
             statement.setString(1, usn);
             ResultSet resultSet = statement.executeQuery();
@@ -423,7 +423,7 @@ public class javapack extends Application {
                     byte[] data = textField22.getText().getBytes(StandardCharsets.UTF_8);
                     byte[] hash = digest.digest(data);
 
-                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_try", "root", "aparnaa");
+                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_try", "root", "abc");
                     PreparedStatement statement = connection.prepareStatement("Insert into my_table (username,password,email) values (?,?,?)");
                     statement.setString(1, textField11.getText());
                     statement.setString(2, Arrays.toString(hash));
